@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A2CE20651C7D6D86005381DF"
-               BuildableName = "AlertBuilder.framework"
-               BlueprintName = "AlertBuilder"
-               ReferencedContainer = "container:AlertBuilder.xcodeproj">
+               BlueprintIdentifier = "1D6548759ECF36B0355FE98E3A7CA703"
+               BuildableName = "Pods_AlertBuilder.framework"
+               BlueprintName = "Pods-AlertBuilder"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A2CE206F1C7D6D86005381DF"
-               BuildableName = "AlertBuilderTests.xctest"
-               BlueprintName = "AlertBuilderTests"
-               ReferencedContainer = "container:AlertBuilder.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2CE20651C7D6D86005381DF"
-            BuildableName = "AlertBuilder.framework"
-            BlueprintName = "AlertBuilder"
-            ReferencedContainer = "container:AlertBuilder.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2CE20651C7D6D86005381DF"
-            BuildableName = "AlertBuilder.framework"
-            BlueprintName = "AlertBuilder"
-            ReferencedContainer = "container:AlertBuilder.xcodeproj">
+            BlueprintIdentifier = "1D6548759ECF36B0355FE98E3A7CA703"
+            BuildableName = "Pods_AlertBuilder.framework"
+            BlueprintName = "Pods-AlertBuilder"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,15 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A2CE20651C7D6D86005381DF"
-            BuildableName = "AlertBuilder.framework"
-            BlueprintName = "AlertBuilder"
-            ReferencedContainer = "container:AlertBuilder.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
