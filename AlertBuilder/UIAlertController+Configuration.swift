@@ -22,7 +22,9 @@ extension UIAlertController {
             addAction(alertAction)
         }
         if let preferredAction = configuration.preferredAction {
-            self.preferredAction = actions.find { $0.title == preferredAction }
+            if #available(iOS 9, *) {
+                self.preferredAction = actions.find { $0.title == preferredAction }
+            }
         }
         for (placeholder, textField) in configuration.textFields {
             addTextFieldWithConfigurationHandler {

@@ -12,7 +12,7 @@ public protocol AlertContext {
 
 extension AlertContext {
     
-    var actions: [String : UIAlertAction] {
+    public var actions: [String : UIAlertAction] {
         return controller.actions.reduce([:]) {
             if let title = $1.title {
                 var actions = $0
@@ -23,7 +23,7 @@ extension AlertContext {
         }
     }
     
-    var textFields: [String : UITextField] {
+    public var textFields: [String : UITextField] {
         return (controller.textFields ?? []).reduce([:]) {
             if let placeholder = $1.placeholder {
                 var actions = $0
