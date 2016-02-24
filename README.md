@@ -1,17 +1,17 @@
-# SwiftCallbacks
+# AlertBuilder
 
-`SwiftCallbacks` replaces the Target-Action pattern with callbacks for UIControl and UIBarButtonItem.
+`AlertBuilder` makes it easy to construct and present alerts with the builder pattern.
 
 ## Installation
 
-`SwiftCallbacks` is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
+`AlertBuilder` is available through [CocoaPods](http://cocoapods.org). To install, simply include the following lines in your podfile:
 ```ruby
 use_frameworks!
-pod 'SwiftCallbacks'
+pod 'AlertBuilder'
 ```
 Be sure to import the module at the top of your .swift files:
 ```swift
-import SwiftCallbacks
+import AlertBuilder
 ```
 Alternatively, clone this repo or download it as a zip and include the classes in your project.
 
@@ -21,4 +21,4 @@ Brad Hilton, brad@skyvive.com
 
 ## License
 
-`SwiftCallbacks` is available under the MIT license. See the LICENSE file for more info.
+`AlertBuilder` is available under the MIT license. See the LICENSE file for more info.
