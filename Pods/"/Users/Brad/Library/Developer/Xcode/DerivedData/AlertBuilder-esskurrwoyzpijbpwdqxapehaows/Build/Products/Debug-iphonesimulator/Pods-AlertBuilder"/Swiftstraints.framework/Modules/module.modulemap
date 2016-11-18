@@ -1,0 +1,10 @@
+framework module Swiftstraints {
+  umbrella header "Pods-AlertBuilder-Swiftstraints-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Swiftstraints.Swift {
+    header "Swiftstraints-Swift.h"
+}

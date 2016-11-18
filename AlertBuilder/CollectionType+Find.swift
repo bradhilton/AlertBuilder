@@ -6,10 +6,9 @@
 //  Copyright © 2016 Brad Hilton. All rights reserved.
 //
 
-extension CollectionType {
+extension Collection {
     
-    @warn_unused_result
-    public func find(@noescape predicate: (Self.Generator.Element) throws -> Bool) rethrows -> Self.Generator.Element? {
+    func find(predicate: (Self.Iterator.Element) throws -> Bool) rethrows -> Self.Iterator.Element? {
         for element in self {
             guard try !predicate(element) else { return element }
         }

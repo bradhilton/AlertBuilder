@@ -1,15 +1,18 @@
 PODS:
-  - AssociatedValues (1.0.1)
-  - SwiftCallbacks (1.0.0):
-    - AssociatedValues (~> 1.0.1)
+  - AssociatedValues (3.0.0)
+  - SwiftCallbacks (3.0.0):
+    - AssociatedValues (~> 3.0.0)
+  - Swiftstraints (3.0.0)
 
 DEPENDENCIES:
-  - SwiftCallbacks (~> 1.0.0)
+  - SwiftCallbacks (~> 3.0.0)
+  - Swiftstraints (~> 3.0.0)
 
 SPEC CHECKSUMS:
-  AssociatedValues: 7c303dc12d04c0edb6fc05c9ccbf1897c7438d0d
-  SwiftCallbacks: a85aa93de01d0091e8b26a8feeec779d17b54bf0
+  AssociatedValues: 5c29f5c0bb2672cf9ef0394bcbe3ce28b9fa0c2a
+  SwiftCallbacks: 525726f3723c9c794ddc6911e5c98abe46456697
+  Swiftstraints: d06a91d1cb80046814a90e934df1c19058ea02a8
 
 PODFILE CHECKSUM: dff3f0f05d6df22c358def2740e3851f05db1f90
 
-COCOAPODS: 1.0.0.beta.3
+COCOAPODS: 1.1.1

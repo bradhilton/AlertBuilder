@@ -14,11 +14,12 @@
 		A2CE20811C7D6DED005381DF /* AlertBuilder.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A2CE20801C7D6DED005381DF /* AlertBuilder.podspec */; };
 		A2CE20831C7D6E44005381DF /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE20821C7D6E44005381DF /* AlertBuilder.swift */; };
 		A2CE20851C7D6E64005381DF /* UIAlertController+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE20841C7D6E64005381DF /* UIAlertController+Configuration.swift */; };
-		A2CE20871C7D6EE2005381DF /* CollectionType+Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE20861C7D6EE2005381DF /* CollectionType+Find.swift */; };
 		A2CE20891C7D6F45005381DF /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE20881C7D6F45005381DF /* Alert.swift */; };
 		A2CE208B1C7D6F53005381DF /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE208A1C7D6F53005381DF /* ActionSheet.swift */; };
 		A2CE208D1C7DF818005381DF /* AlertControllerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE208C1C7DF818005381DF /* AlertControllerConfiguration.swift */; };
 		A2CE208F1C7DF847005381DF /* AlertContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE208E1C7DF847005381DF /* AlertContext.swift */; };
+		A2DC2FBF1DDF641500059847 /* CollectionType+Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DC2FBE1DDF641500059847 /* CollectionType+Find.swift */; };
+		A2DC2FC11DDF64FB00059847 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DC2FC01DDF64FB00059847 /* AlertController.swift */; };
 		DDC68A6FD4D35CEB6B0D95C1 /* Pods_AlertBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87D959A912FEB1C297B084A /* Pods_AlertBuilder.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +48,12 @@
 		A2CE20801C7D6DED005381DF /* AlertBuilder.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AlertBuilder.podspec; sourceTree = "<group>"; };
 		A2CE20821C7D6E44005381DF /* AlertBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
 		A2CE20841C7D6E64005381DF /* UIAlertController+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Configuration.swift"; sourceTree = "<group>"; };
-		A2CE20861C7D6EE2005381DF /* CollectionType+Find.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Find.swift"; sourceTree = "<group>"; };
 		A2CE20881C7D6F45005381DF /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		A2CE208A1C7D6F53005381DF /* ActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheet.swift; sourceTree = "<group>"; };
 		A2CE208C1C7DF818005381DF /* AlertControllerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerConfiguration.swift; sourceTree = "<group>"; };
 		A2CE208E1C7DF847005381DF /* AlertContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertContext.swift; sourceTree = "<group>"; };
+		A2DC2FBE1DDF641500059847 /* CollectionType+Find.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CollectionType+Find.swift"; sourceTree = "<group>"; };
+		A2DC2FC01DDF64FB00059847 /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		B87D959A912FEB1C297B084A /* Pods_AlertBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlertBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,13 +113,14 @@
 		A2CE20681C7D6D86005381DF /* AlertBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				A2DC2FBE1DDF641500059847 /* CollectionType+Find.swift */,
 				A2CE208A1C7D6F53005381DF /* ActionSheet.swift */,
 				A2CE20881C7D6F45005381DF /* Alert.swift */,
+				A2DC2FC01DDF64FB00059847 /* AlertController.swift */,
 				A2CE20691C7D6D86005381DF /* AlertBuilder.h */,
 				A2CE20821C7D6E44005381DF /* AlertBuilder.swift */,
 				A2CE208E1C7DF847005381DF /* AlertContext.swift */,
 				A2CE208C1C7DF818005381DF /* AlertControllerConfiguration.swift */,
-				A2CE20861C7D6EE2005381DF /* CollectionType+Find.swift */,
 				A2CE206B1C7D6D86005381DF /* Info.plist */,
 				A2CE20841C7D6E64005381DF /* UIAlertController+Configuration.swift */,
 			);
@@ -160,12 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2CE207A1C7D6D86005381DF /* Build configuration list for PBXNativeTarget "AlertBuilder" */;
 			buildPhases = (
-				25EED6D0A9CEA1F551698577 /* Check Pods Manifest.lock */,
+				25EED6D0A9CEA1F551698577 /* [CP] Check Pods Manifest.lock */,
 				A2CE20611C7D6D86005381DF /* Sources */,
 				A2CE20621C7D6D86005381DF /* Frameworks */,
 				A2CE20631C7D6D86005381DF /* Headers */,
 				A2CE20641C7D6D86005381DF /* Resources */,
-				225FEC180E607C1FF3E2457A /* Copy Pods Resources */,
+				225FEC180E607C1FF3E2457A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,12 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2CE207D1C7D6D86005381DF /* Build configuration list for PBXNativeTarget "AlertBuilderTests" */;
 			buildPhases = (
-				BA91E1FDB629A63AF97B56F2 /* Check Pods Manifest.lock */,
+				BA91E1FDB629A63AF97B56F2 /* [CP] Check Pods Manifest.lock */,
 				A2CE206C1C7D6D86005381DF /* Sources */,
 				A2CE206D1C7D6D86005381DF /* Frameworks */,
 				A2CE206E1C7D6D86005381DF /* Resources */,
-				D353BC739394AF8E8EE8A755 /* Embed Pods Frameworks */,
-				1C867A918FDFBC3F6666FEE5 /* Copy Pods Resources */,
+				D353BC739394AF8E8EE8A755 /* [CP] Embed Pods Frameworks */,
+				1C867A918FDFBC3F6666FEE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,9 +212,11 @@
 				TargetAttributes = {
 					A2CE20651C7D6D86005381DF = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 					A2CE206F1C7D6D86005381DF = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -252,14 +257,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C867A918FDFBC3F6666FEE5 /* Copy Pods Resources */ = {
+		1C867A918FDFBC3F6666FEE5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,14 +272,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlertBuilderTests/Pods-AlertBuilderTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		225FEC180E607C1FF3E2457A /* Copy Pods Resources */ = {
+		225FEC180E607C1FF3E2457A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,44 +287,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlertBuilder/Pods-AlertBuilder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		25EED6D0A9CEA1F551698577 /* Check Pods Manifest.lock */ = {
+		25EED6D0A9CEA1F551698577 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BA91E1FDB629A63AF97B56F2 /* Check Pods Manifest.lock */ = {
+		BA91E1FDB629A63AF97B56F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D353BC739394AF8E8EE8A755 /* Embed Pods Frameworks */ = {
+		D353BC739394AF8E8EE8A755 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,10 +339,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2CE20871C7D6EE2005381DF /* CollectionType+Find.swift in Sources */,
 				A2CE20851C7D6E64005381DF /* UIAlertController+Configuration.swift in Sources */,
+				A2DC2FBF1DDF641500059847 /* CollectionType+Find.swift in Sources */,
 				A2CE20891C7D6F45005381DF /* Alert.swift in Sources */,
 				A2CE208F1C7DF847005381DF /* AlertContext.swift in Sources */,
+				A2DC2FC11DDF64FB00059847 /* AlertController.swift in Sources */,
 				A2CE208B1C7D6F53005381DF /* ActionSheet.swift in Sources */,
 				A2CE20831C7D6E44005381DF /* AlertBuilder.swift in Sources */,
 				A2CE208D1C7DF818005381DF /* AlertControllerConfiguration.swift in Sources */,
@@ -400,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -442,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,12 +469,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AlertBuilder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.AlertBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -483,11 +490,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AlertBuilder/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.AlertBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -499,6 +507,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.AlertBuilderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -510,6 +519,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradhilton.AlertBuilderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

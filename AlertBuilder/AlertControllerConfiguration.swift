@@ -10,6 +10,7 @@ struct Action {
     
     let style: UIAlertActionStyle
     let enabled: Bool
+    let image: UIImage?
     let handler: ActionHandler?
     
 }
@@ -32,9 +33,10 @@ public struct AlertControllerConfiguration {
     var textFields: [(String , TextField)] = []
     var title: String?
     var message: String?
-    var preferredStyle: UIAlertControllerStyle = .Alert
+    var view: UIView?
+    var style: UIAlertControllerStyle = .alert
     var barButtonItem: UIBarButtonItem?
     var sourceView: UIView?
-    var sourceRect: CGRect = CGRectZero
+    var sourceRect: CGRect = CGRect.zero
     
 }

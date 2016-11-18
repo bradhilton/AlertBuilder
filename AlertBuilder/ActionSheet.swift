@@ -11,22 +11,24 @@ public struct ActionSheet : AlertBuilder {
     public var configuration = AlertControllerConfiguration()
     
     public init(title: String? = nil, message: String? = nil, cancelable: Bool = true) {
-        initialize(title: title, message: message, cancelable: cancelable)
+        initialize(title: title, message: message, style: .actionSheet, cancelable: cancelable)
     }
     
-    public func barButtonItem(barButtonItem: UIBarButtonItem) -> ActionSheet {
-        return modify { (inout config: AlertControllerConfiguration) in
-            config.barButtonItem = barButtonItem
-            config.preferredStyle = .ActionSheet
-        }
+    public func barButtonItem(_ barButtonItem: UIBarButtonItem) -> ActionSheet {
+        return modify { (config: inout AlertControllerConfiguration) in config.barButtonItem = barButtonItem }
     }
     
-    public func sourceView(sourceView: UIView, sourceRect: CGRect) -> ActionSheet {
-        return modify { (inout config: AlertControllerConfiguration) in
+    public func sourceView(_ sourceView: UIView, sourceRect: CGRect) -> ActionSheet {
+        return modify { (config: inout AlertControllerConfiguration) in
             config.sourceView = sourceView
             config.sourceRect = sourceRect
-            config.preferredStyle = .ActionSheet
         }
+    }
+    
+    public func presentFrom(_ viewController: UIViewController?) -> AlertController {
+        let controller = create()
+        viewController?.present(controller, animated: true, completion: nil)
+        return controller
     }
     
 }

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7A40A02504C8ACB2238E339CB5A5C1BE'
+               BlueprintIdentifier = 'A0EB475C31D6A2BE5A35ADE57EE5F442'
                BlueprintName = 'SwiftCallbacks'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SwiftCallbacks.framework'>

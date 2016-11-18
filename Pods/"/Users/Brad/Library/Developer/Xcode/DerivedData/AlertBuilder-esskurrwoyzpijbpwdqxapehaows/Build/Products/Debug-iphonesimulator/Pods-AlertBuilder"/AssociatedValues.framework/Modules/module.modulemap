@@ -1,0 +1,10 @@
+framework module AssociatedValues {
+  umbrella header "Pods-AlertBuilder-AssociatedValues-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module AssociatedValues.Swift {
+    header "AssociatedValues-Swift.h"
+}
