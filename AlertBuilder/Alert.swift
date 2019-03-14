@@ -14,13 +14,13 @@ public struct Alert : AlertBuilder {
         initialize(title: title, message: message, style: .alert, cancelable: cancelable)
     }
     
-    public func textField(placeholder: String, configure: TextFieldConfiguration? = nil) -> Alert {
+    public func textField(_ placeholder: String, configure: TextFieldConfiguration? = nil) -> Alert {
         return modify { (config: inout AlertControllerConfiguration) in
             config.textFields.append((placeholder, TextField(configuration: configure)))
         }
     }
     
-    public func observeTextField(placeholder: String, observer: @escaping TextFieldHandler) -> Alert {
+    public func observeTextField(_ placeholder: String, observer: @escaping TextFieldHandler) -> Alert {
         return modify { (config: inout AlertControllerConfiguration) in
             if let (_, textField) = config.textFields.find(predicate: { $0.0 == placeholder }) {
                 textField.observer = observer

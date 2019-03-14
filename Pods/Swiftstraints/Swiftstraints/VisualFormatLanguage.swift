@@ -16,35 +16,39 @@ private func vflKey(_ object: AnyObject) -> String {
 public struct VisualFormatLanguage : ExpressibleByStringInterpolation {
     
     let format: String
-    var metrics = NSHashTable<NSNumber>(options: NSPointerFunctions.Options.weakMemory)
+    var metrics = NSHashTable<NSNumber>(options: [.copyIn, .objectPointerPersonality])
     var views = NSHashTable<UIView>(options: NSPointerFunctions.Options.weakMemory)
+    var viewCount: Int = 0  // used to check if this VFL is still valid; since views won't persist the view pointers, if the view is deallocated, there will be an exception when constraints are created later
     
     public init(stringInterpolation strings: VisualFormatLanguage...) {
         var format = ""
         for vfl in strings {
             format.append(vfl.format)
             for metric in vfl.metrics.allObjects {
-                metrics.add(metric)
+                if !metrics.contains(metric) {
+                    metrics.add(metric)
+                }
             }
             for view in vfl.views.allObjects {
-                views.add(view)
+                if !views.contains(view) {
+                    views.add(view)
+                    viewCount += 1
+                }
             }
         }
         self.format = format
     }
     
     public init<T>(stringInterpolationSegment expr: T) {
-        format = String(describing: expr)
-    }
-    
-    public init(stringInterpolationSegment view: UIView) {
-        format = vflKey(view)
-        views.add(view)
-    }
-    
-    public init(stringInterpolationSegment number: NSNumber) {
-        format = vflKey(number)
-        metrics.add(number)
+        if let view = expr as? UIView {
+            format = vflKey(view)
+            views.add(view)
+        } else if let number = expr as? NSNumber {
+            format = vflKey(number)
+            metrics.add(number)
+        } else {
+            format = String(describing: expr)
+        }
     }
     
     func vflDictionary<T>(_ table: NSHashTable<T>) -> [String : AnyObject] {
@@ -57,6 +61,8 @@ public struct VisualFormatLanguage : ExpressibleByStringInterpolation {
     
     /// Returns layout constraints with options.
     public func constraints(_ options: NSLayoutFormatOptions) -> [NSLayoutConstraint] {
+        /// fail it if views are changed in case of the weak pointers' targets being deallocated
+        guard views.count == viewCount else { return [] }
         return NSLayoutConstraint.constraints(withVisualFormat: format, options: options, metrics: vflDictionary(metrics), views: vflDictionary(views))
     }
     

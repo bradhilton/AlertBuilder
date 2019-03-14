@@ -25,6 +25,7 @@ public struct ActionSheet : AlertBuilder {
         }
     }
     
+    @discardableResult
     public func presentFrom(_ viewController: UIViewController?) -> AlertController {
         let controller = create()
         viewController?.present(controller, animated: true, completion: nil)

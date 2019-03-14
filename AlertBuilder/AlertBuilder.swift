@@ -19,7 +19,7 @@ public protocol AlertBuilder {
 
 extension AlertBuilder {
     
-    mutating func initialize(title: String?, message: String?, style: UIAlertControllerStyle, cancelable: Bool) {
+    mutating func initialize(title: String?, message: String?, style: UIAlertController.Style, cancelable: Bool) {
         configuration.title = title
         configuration.message = message
         configuration.style = style
@@ -56,21 +56,23 @@ extension AlertBuilder {
         return addAction(title, preferred: preferred, enabled: enabled, image: image, handler: handler, style: .cancel)
     }
     
+    @discardableResult
     public func create() -> AlertController {
         return AlertController(configuration: configuration)
     }
     
+    @discardableResult
     public func show() -> AlertController {
         let controller = create()
         controller.show()
         return controller
     }
     
-    func style(_ style: UIAlertControllerStyle) -> Self {
+    func style(_ style: UIAlertController.Style) -> Self {
         return modify { (config: inout AlertControllerConfiguration) in config.style = style }
     }
     
-    fileprivate func addAction(_ title: String, preferred: Bool, enabled: Bool, image: UIImage?, handler: ActionHandler?, style: UIAlertActionStyle) -> Self {
+    fileprivate func addAction(_ title: String, preferred: Bool, enabled: Bool, image: UIImage?, handler: ActionHandler?, style: UIAlertAction.Style) -> Self {
         return modify { (config: inout AlertControllerConfiguration) in
             let action = Action(style: style, enabled: enabled, image: image, handler: handler)
             config.actions.append((title, action))

@@ -12,7 +12,7 @@ import Swiftstraints
 extension UIAlertController {
     
     convenience init(configuration: AlertControllerConfiguration) {
-        let style: UIAlertControllerStyle
+        let style: UIAlertController.Style
         if UIDevice.current.userInterfaceIdiom == .pad
             && configuration.style == .actionSheet
             && configuration.sourceView == nil

@@ -8,7 +8,7 @@
 
 struct Action {
     
-    let style: UIAlertActionStyle
+    let style: UIAlertAction.Style
     let enabled: Bool
     let image: UIImage?
     let handler: ActionHandler?
@@ -34,7 +34,7 @@ public struct AlertControllerConfiguration {
     var title: String?
     var message: String?
     var view: UIView?
-    var style: UIAlertControllerStyle = .alert
+    var style: UIAlertController.Style = .alert
     var barButtonItem: UIBarButtonItem?
     var sourceView: UIView?
     var sourceRect: CGRect = CGRect.zero

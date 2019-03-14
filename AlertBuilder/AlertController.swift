@@ -53,7 +53,7 @@ open class AlertController : UIAlertController {
         if UIDevice.current.userInterfaceIdiom == .pad && preferredStyle == .actionSheet {
             topViewController?.present(self, animated: true, completion: nil)
         } else {
-            let topWindowLevel = UIApplication.shared.windows.last?.windowLevel ?? 0
+            let topWindowLevel = UIApplication.shared.windows.last?.windowLevel ?? UIWindow.Level(rawValue: 0)
             window.windowLevel = topWindowLevel + 1
             window.makeKeyAndVisible()
             if window.rootViewController?.presentedViewController != nil {

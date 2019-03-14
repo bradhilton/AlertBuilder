@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
 
   s.source_files  = "AlertBuilder", "AlertBuilder/**/*.{swift,h,m}"
   s.requires_arc = true
-  s.dependency 'SwiftCallbacks', '~>3.0.0'
-  s.dependency 'Swiftstraints', '~>3.0.0'
+  s.dependency 'SwiftCallbacks', '~> 4.2.0'
+  s.dependency 'Swiftstraints', '~> 4.2.0'
 end
