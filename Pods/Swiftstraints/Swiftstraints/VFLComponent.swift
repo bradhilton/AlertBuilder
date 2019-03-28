@@ -84,7 +84,7 @@ extension VFLComponent {
     }
 
     /// Returns layout constraints with options.
-    public func constraints(axis: UILayoutConstraintAxis, options: NSLayoutFormatOptions) -> [NSLayoutConstraint] {
+    public func constraints(axis: NSLayoutConstraint.Axis, options: NSLayoutConstraint.FormatOptions) -> [NSLayoutConstraint] {
         /// fail it if views are changed in case of the weak pointers' targets being deallocated
         let keyCount = viewMap.keyEnumerator().allObjects.count
         guard let viewCount = viewMap.objectEnumerator()?.allObjects.count, keyCount == viewCount else { return [] }
@@ -92,6 +92,8 @@ extension VFLComponent {
         switch axis {
         case .horizontal: axisPrefix = "H:"
         case .vertical:   axisPrefix = "V:"
+        @unknown default:
+            fatalError("Unexpected axis: \(axis)")
         }
         return NSLayoutConstraint.constraints(withVisualFormat: axisPrefix + format, options: options, metrics: vflDictionary(metricMap), views: vflDictionary(viewMap))
     }
@@ -204,10 +206,10 @@ public func .~(dimension: VFLComponent, priority: LayoutPriority) -> VFLComponen
 /// NSLayoutConstraints(V:|-30-[versionLabel:20]-10-[logoView]-(30.~(.required - 1))-|)
 
 extension Array where Element: NSLayoutConstraint {
-    public init(H: VFLComponent, options: NSLayoutFormatOptions = []) {
+    public init(H: VFLComponent, options: NSLayoutConstraint.FormatOptions = []) {
         self = H.constraints(axis: .horizontal, options: options) as! [Element]
     }
-    public init(V: VFLComponent, options: NSLayoutFormatOptions = []) {
+    public init(V: VFLComponent, options: NSLayoutConstraint.FormatOptions = []) {
         self = V.constraints(axis: .vertical, options: options) as! [Element]
     }
 }

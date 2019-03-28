@@ -1,18 +1,24 @@
 PODS:
-  - AssociatedValues (3.0.0)
-  - SwiftCallbacks (4.0.0):
-    - AssociatedValues (~> 3.0.0)
-  - Swiftstraints (4.0.0)
+  - AssociatedValues (5.0.0)
+  - SwiftCallbacks (5.0.0):
+    - AssociatedValues (= 5.0.0)
+  - Swiftstraints (5.0.0)
 
 DEPENDENCIES:
-  - SwiftCallbacks (~> 4.0.0)
-  - Swiftstraints (~> 4.0.0)
+  - SwiftCallbacks (= 5.0.0)
+  - Swiftstraints (= 5.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AssociatedValues
+    - SwiftCallbacks
+    - Swiftstraints
 
 SPEC CHECKSUMS:
-  AssociatedValues: 5c29f5c0bb2672cf9ef0394bcbe3ce28b9fa0c2a
-  SwiftCallbacks: 0b9ecffed89c338bbf82e080ef0cea39c6ee1052
-  Swiftstraints: b9f6b813b9a1a8f15624665245f47b998cb60ef8
+  AssociatedValues: 33dfc4f4d0ec2f1177a2558e176364e2ac849cd1
+  SwiftCallbacks: 3d4459ae3f9ac0e5952fe4812003154b64450f81
+  Swiftstraints: c684ff20ef5403e1a1e1967e1f30ffc11f353144
 
 PODFILE CHECKSUM: dff3f0f05d6df22c358def2740e3851f05db1f90
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.7.0.beta.2
