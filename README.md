@@ -17,7 +17,7 @@ Alternatively, clone this repo or download it as a zip and include the classes i
 
 ## Author
 
-Brad Hilton, brad@skyvive.com
+Brad Hilton, brad.hilton.nw@gmail.com
 
 ## License
 
